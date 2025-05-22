@@ -1,10 +1,10 @@
-# ⚖️ Proyecto: Balanceador de Carga con HAProxy + Apache + Datadog
+Proyecto: Balanceador de Carga con HAProxy + Apache + Datadog
 
 Este proyecto implementa un sistema de balanceo de carga utilizando **HAProxy** como balanceador principal y **Apache** en tres servidores backend. Además, cada servidor reporta su estado y métricas a **Datadog** para monitoreo en tiempo real.
 
 ---
 
-## 📌 Estructura del proyecto
+ Estructura del proyecto
 
 
 
@@ -30,7 +30,7 @@ servidor3/
 
 ---
 
-## 🔧 Requisitos
+ Requisitos
 
 - 4 máquinas (físicas o virtuales) con Ubuntu (recomendado Ubuntu 20.04 o superior)
 - Acceso a Internet para instalar paquetes
@@ -39,7 +39,7 @@ servidor3/
 
 ---
 
-## 🛠️ Paso 1: Configurar los servidores Apache
+ Paso 1: Configurar los servidores Apache
 
 ### En cada servidor (servidor1, servidor2, servidor3):
 
@@ -53,7 +53,7 @@ Verifica que funcione:
 echo "<h1>Servidor 1</h1>" | sudo tee /var/www/html/index.html
 
 
-⚙️ Paso 2: Instalar HAProxy en el balanceador
+ Paso 2: Instalar HAProxy en el balanceador
 
 sudo apt update
 sudo apt install haproxy -y
@@ -106,8 +106,7 @@ instances:
 Reinicia el agente:
 sudo systemctl restart datadog-agent
 
-
-✅ Verificación
+ Verificación
  ingresa desde cualquier cliente con:
 curl 192.168.3.104:8084
 
