@@ -1,0 +1,8 @@
+instances:
+  - url: http://localhost:8404/stats;csv
+    username: admin
+    password: admin
+    collect_aggregates_only: true
+    collect_status_metrics: true
+    status_check: true
+
